@@ -1,0 +1,27 @@
+{
+  "name": "asylum-seeker-welcome-guides",
+  "version": "1.0.0",
+  "description": "Comprehensive welcome guides for asylum seekers in 60 languages",
+  "scripts": {
+    "build": "npm run generate-index",
+    "generate-index": "node scripts/generate-index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PresidentAnderson/asylum-seeker-welcome-guides.git"
+  },
+  "keywords": [
+    "asylum",
+    "refugee",
+    "welcome-guide",
+    "humanitarian",
+    "multilingual",
+    "emergency-resources"
+  ],
+  "author": "Asylum Guide Admin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PresidentAnderson/asylum-seeker-welcome-guides/issues"
+  },
+  "homepage": "https://github.com/PresidentAnderson/asylum-seeker-welcome-guides#readme"
+}

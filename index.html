@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Guides for Asylum Seekers - 60 Languages</title>
+    <meta name="description" content="Comprehensive welcome guides and resources for asylum seekers available in 60 languages. Emergency contacts, legal aid, healthcare, and integration support.">
+    <style>
+        :root {
+            --primary: #0066cc;
+            --secondary: #00a86b;
+            --danger: #dc3545;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .tagline {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .emergency-banner {
+            background: var(--danger);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .emergency-banner a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .language-selector {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .language-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .lang-btn {
+            background: var(--light);
+            border: 2px solid transparent;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .lang-btn:hover {
+            border-color: var(--primary);
+            background: #e3f2fd;
+        }
+
+        .lang-btn.priority {
+            background: #fff3cd;
+            border-color: #ffc107;
+        }
+
+        .sections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .section-card h2 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-card .icon {
+            font-size: 1.5em;
+        }
+
+        .section-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section-card li:last-child {
+            border-bottom: none;
+        }
+
+        .section-card a {
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .section-card a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        .quick-links {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .quick-links h2 {
+            color: var(--danger);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .emergency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .emergency-item {
+            background: #fee;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            border: 2px solid var(--danger);
+        }
+
+        .emergency-item .number {
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--danger);
+        }
+
+        .emergency-item .label {
+            margin-top: 5px;
+            color: #666;
+        }
+
+        footer {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .button-primary {
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 5px;
+            transition: background 0.3s;
+        }
+
+        .button-primary:hover {
+            background: #0052a3;
+        }
+
+        .button-secondary {
+            background: var(--secondary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 5px;
+            transition: background 0.3s;
+        }
+
+        .button-secondary:hover {
+            background: #008b57;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .language-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+
+            .sections-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .language-notice {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: #155724;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Welcome Guides for Asylum Seekers</h1>
+            <p class="tagline">Essential Resources in 60 Languages</p>
+            <div class="emergency-banner">
+                🆘 EMERGENCY? Call 911 (USA/Canada) | 112 (Europe) | 999 (UK) | <a href="04-Quick-Reference/Emergency-Card-Multilingual.md">Emergency Card</a>
+            </div>
+            <div class="language-notice">
+                📢 This resource is available in 60 languages. Select your language below or use the emergency quick reference card for immediate help.
+            </div>
+        </header>
+
+        <div class="quick-links">
+            <h2>🚨 Emergency Contacts</h2>
+            <div class="emergency-grid">
+                <div class="emergency-item">
+                    <div class="number">911</div>
+                    <div class="label">USA/Canada Emergency</div>
+                </div>
+                <div class="emergency-item">
+                    <div class="number">112</div>
+                    <div class="label">Europe Emergency</div>
+                </div>
+                <div class="emergency-item">
+                    <div class="number">988</div>
+                    <div class="label">Mental Health Crisis (USA)</div>
+                </div>
+                <div class="emergency-item">
+                    <div class="number">211</div>
+                    <div class="label">Community Services</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="language-selector">
+            <h2>🗣️ Select Your Language / اختر لغتك / Seleccione su idioma</h2>
+            <div class="language-grid">
+                <button class="lang-btn priority" onclick="selectLanguage('English')">English</button>
+                <button class="lang-btn priority" onclick="selectLanguage('Arabic')">العربية</button>
+                <button class="lang-btn priority" onclick="selectLanguage('Spanish')">Español</button>
+                <button class="lang-btn priority" onclick="selectLanguage('French')">Français</button>
+                <button class="lang-btn priority" onclick="selectLanguage('Chinese-Simplified')">简体中文</button>
+                <button class="lang-btn priority" onclick="selectLanguage('Russian')">Русский</button>
+                <button class="lang-btn priority" onclick="selectLanguage('Portuguese')">Português</button>
+                <button class="lang-btn priority" onclick="selectLanguage('Dari')">دری</button>
+                <button class="lang-btn priority" onclick="selectLanguage('Pashto')">پښتو</button>
+                <button class="lang-btn priority" onclick="selectLanguage('Somali')">Soomaali</button>
+                <button class="lang-btn priority" onclick="selectLanguage('Tigrinya')">ትግርኛ</button>
+                <button class="lang-btn priority" onclick="selectLanguage('Persian-Farsi')">فارسی</button>
+                <button class="lang-btn priority" onclick="selectLanguage('Turkish')">Türkçe</button>
+                <button class="lang-btn priority" onclick="selectLanguage('Urdu')">اردو</button>
+                <button class="lang-btn priority" onclick="selectLanguage('Swahili')">Kiswahili</button>
+                <button class="lang-btn" onclick="selectLanguage('Ukrainian')">Українська</button>
+                <button class="lang-btn" onclick="selectLanguage('Hindi')">हिन्दी</button>
+                <button class="lang-btn" onclick="selectLanguage('Bengali')">বাংলা</button>
+                <button class="lang-btn" onclick="selectLanguage('Vietnamese')">Tiếng Việt</button>
+                <button class="lang-btn" onclick="selectLanguage('Korean')">한국어</button>
+                <button class="lang-btn" onclick="viewAllLanguages()">+ 40 More Languages</button>
+            </div>
+        </div>
+
+        <div class="sections-grid">
+            <div class="section-card">
+                <h2><span class="icon">🌍</span> Country Guides</h2>
+                <ul>
+                    <li><a href="01-Country-Guides/Canada/Welcome-Guide-Canada.md">📍 Canada</a></li>
+                    <li><a href="01-Country-Guides/United-States/">📍 United States</a></li>
+                    <li><a href="01-Country-Guides/United-Kingdom/">📍 United Kingdom</a></li>
+                    <li><a href="01-Country-Guides/Australia/">📍 Australia</a></li>
+                    <li><a href="01-Country-Guides/Germany/">📍 Germany</a></li>
+                    <li><a href="01-Country-Guides/France/">📍 France</a></li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">📚</span> Essential Resources</h2>
+                <ul>
+                    <li><a href="02-Essential-Resources/Legal-Aid/Legal-Resources-Guide.md">⚖️ Legal Aid</a></li>
+                    <li><a href="02-Essential-Resources/Healthcare/">🏥 Healthcare</a></li>
+                    <li><a href="02-Essential-Resources/Housing/">🏠 Housing</a></li>
+                    <li><a href="02-Essential-Resources/Education/">🎓 Education</a></li>
+                    <li><a href="02-Essential-Resources/Employment/">💼 Employment</a></li>
+                    <li><a href="02-Essential-Resources/Social-Services/">🤝 Social Services</a></li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">📋</span> Quick Reference</h2>
+                <ul>
+                    <li><a href="04-Quick-Reference/Emergency-Card-Multilingual.md">🆘 Emergency Card (Multi-language)</a></li>
+                    <li><a href="05-Forms-and-Documents/">📝 Forms & Documents</a></li>
+                    <li><a href="06-Emergency-Contacts/">📞 Emergency Contacts</a></li>
+                    <li><a href="07-Integration-Programs/">🤝 Integration Programs</a></li>
+                    <li><a href="08-Templates/Country-Guide-Template.md">📄 Guide Templates</a></li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">🗣️</span> Language Support</h2>
+                <ul>
+                    <li><a href="03-Language-Versions/Translation-Master-List.md">🌐 60 Languages Available</a></li>
+                    <li><a href="03-Language-Versions/Arabic/">العربية (Arabic)</a></li>
+                    <li><a href="03-Language-Versions/Spanish/">Español (Spanish)</a></li>
+                    <li><a href="03-Language-Versions/French/">Français (French)</a></li>
+                    <li><a href="03-Language-Versions/">View All Languages →</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="quick-links">
+            <h2>📖 How to Use This Resource</h2>
+            <ol style="text-align: left; max-width: 800px; margin: 0 auto;">
+                <li><strong>Emergency?</strong> Use the emergency card for immediate help in multiple languages</li>
+                <li><strong>New Arrival?</strong> Start with your destination country guide</li>
+                <li><strong>Specific Need?</strong> Browse essential resources by topic</li>
+                <li><strong>Language Help?</strong> Find guides in your preferred language</li>
+                <li><strong>Share:</strong> These resources are free - share with others who need help</li>
+            </ol>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="README.md" class="button-primary">📖 Full Documentation</a>
+                <a href="04-Quick-Reference/Emergency-Card-Multilingual.md" class="button-secondary">🆘 Emergency Card</a>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>Free Resource for Humanitarian Use</strong></p>
+            <p>Created with support from UNHCR, IRC, and community organizations</p>
+            <p>Last Updated: 2025 | <a href="https://github.com/PresidentAnderson/asylum-seeker-welcome-guides">GitHub Repository</a></p>
+            <p style="margin-top: 15px; font-style: italic;">
+                "Every person has the right to seek and to enjoy in other countries asylum from persecution."<br>
+                - Universal Declaration of Human Rights, Article 14
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        function selectLanguage(lang) {
+            // Navigate to language-specific version
+            window.location.href = `03-Language-Versions/${lang}/`;
+        }
+
+        function viewAllLanguages() {
+            window.location.href = '03-Language-Versions/Translation-Master-List.md';
+        }
+
+        // Add keyboard navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons.forEach(btn => {
+                btn.setAttribute('tabindex', '0');
+                btn.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        btn.click();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
