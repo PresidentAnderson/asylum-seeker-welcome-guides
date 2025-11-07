@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Comprehensive welcome guides for asylum seekers in 60 languages",
   "scripts": {
-    "build": "npm run generate-index",
-    "generate-index": "node scripts/generate-index.js"
+    "build": "echo 'Static site ready'",
+    "start": "echo 'Serving static files'"
   },
   "repository": {
     "type": "git",
